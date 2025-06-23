@@ -1,32 +1,33 @@
 public class GameMaster {
     public static void main(String[] args) {
-        Hero h = new Hero();
-        h.name = "アベル";
-        h.hp = 100;
-        h.weapon = "銅の剣";
+        Hero abel = new Hero();
+        abel.name = "アベル";
+        abel.hp = 100;
+        abel.weapon = "銅の剣";
 
         Slime s = new Slime();
         s.name = "スライムA";
         s.hp = 30;
 
         System.out.println("冒険が始まる...!");
-        h.showStatus();
+        abel.showStatus();
         s.showStatus();
         System.out.println("戦闘開始!");
-        h.attack(s);
+        abel.attack(s);
         s.showStatus();
-        s.attack(h);
-        h.showStatus();
-        h.heal();
-        h.showStatus();
-        h.attack(s);
-        h.attack(s);
-        h.attack(s);
+        s.attack(abel);
+        abel.showStatus();
+        abel.heal();
+        abel.showStatus();
+        abel.attack(s);
+        abel.attack(s);
+        abel.attack(s);
         System.out.println("---戦闘終了---");
-        h.showStatus();
+        abel.showStatus();
         s.showStatus();
-        h.isAlive();
+        abel.isAlive();
         s.isAlive();
         System.out.println("---参照の確認---");
+        abel.partyMember();
     }
 }
