@@ -1,16 +1,17 @@
 public abstract class Character {
     String name;
     int hp;
-    boolean isAlive;
-    int partyMember;
+    public Character(String name, int hp) {
+        this.name = name;
+        this.hp = hp;
+    }
 
-    void isAlive() {
+     public final boolean isAlive() {
         if (hp <= 0) {
-            isAlive = false;
+            return false;
         } else {
-            isAlive = true;
+            return true;
         }
-        System.out.println(name + "は生きている:" + isAlive);
     }
 
     void partyMember() {
