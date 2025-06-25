@@ -4,15 +4,16 @@ public abstract class Character {
     boolean isAlive;
     int partyMember;
 
-    public void isAlive() {
+    void isAlive() {
         if (hp <= 0) {
             isAlive = false;
-        }else{
+        } else {
             isAlive = true;
         }
         System.out.println(name + "は生きている:" + isAlive);
     }
-    public void partyMember() {
+
+    void partyMember() {
         hp -= 50;
         System.out.println("partMember経由でHPを減らした後:");
         System.out.println(name + ":HP " + hp);
@@ -21,8 +22,4 @@ public abstract class Character {
     public void showStatus() {
         System.out.println(name + ":HP" + hp);
     }
-
-
-
-    public abstract void attack(Character target);
 }
