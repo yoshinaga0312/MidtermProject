@@ -19,7 +19,7 @@ public abstract class Character {
         System.out.println(name + ":HP " + hp);
     }
 
-    public void showStatus() {
+    void showStatus() {
         System.out.println(name + ":HP" + hp);
     }
 }
