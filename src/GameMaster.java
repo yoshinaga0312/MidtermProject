@@ -4,8 +4,6 @@ public class GameMaster {
 
         Slime s = new Slime("スライムA",30);
 
-
-
         System.out.println("冒険が始まる...!");
         abel.showStatus();
         s.showStatus();
